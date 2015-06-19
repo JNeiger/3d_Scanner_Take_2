@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{08DC5CEA-E5BA-4453-A1AC-FAF569AFF77C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>pcl_test</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <ExecutablePath>C:\Program Files %28x86%29\PCL\bin;$(ExecutablePath)</ExecutablePath>
+    <ReferencePath>C:\Program Files %28x86%29\PCL\bin;$(ReferencePath)</ReferencePath>
+    <IncludePath>C:\Program Files %28x86%29\PCL\bin;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\Program Files %28x86%29\PCL\bin;$(LibraryPath)</LibraryPath>
+    <SourcePath>C:\Users\Joseph\Documents\Visual Studio 2010\Projects\pcl_test\pcl_test;$(SourcePath)</SourcePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\Program Files %28x86%29\OpenNI\Include;C:\Program Files %28x86%29\VTK 5.8.0\include\vtk-5.8;C:\Program Files %28x86%29\qhull\include;C:\Program Files %28x86%29\flann\include;C:\Program Files %28x86%29\Eigen\include;C:\Program Files %28x86%29\Boost\include;C:\Program Files %28x86%29\PCL\include\pcl-1.8;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Program Files %28x86%29\VTK 5.8.0\lib\vtk-5.8;C:\Program Files %28x86%29\qhull\lib;C:\Program Files %28x86%29\flann\lib;C:\Program Files %28x86%29\Boost\lib;C:\Program Files %28x86%29\PCL\lib;C:\Program Files %28x86%29\OpenNI\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>pcl_common_d.lib;pcl_features_d.lib;pcl_filters_d.lib;pcl_io_d.lib;pcl_io_ply_d.lib;pcl_kdtree_d.lib;pcl_keypoints_d.lib;pcl_ml_d.lib;pcl_octree_d.lib;pcl_outofcore_d.lib;pcl_people_d.lib;pcl_recognition_d.lib;pcl_registration_d.lib;pcl_sample_consensus_d.lib;pcl_search_d.lib;pcl_segmentation_d.lib;pcl_stereo_d.lib;pcl_surface_d.lib;pcl_tracking_d.lib;pcl_visualization_d.lib;boost_chrono-vc100-mt-gd-1_50.lib;boost_date_time-vc100-mt-gd-1_50.lib;boost_filesystem-vc100-mt-gd-1_50.lib;boost_graph-vc100-mt-gd-1_50.lib;boost_graph_parallel-vc100-mt-gd-1_50.lib;boost_iostreams-vc100-mt-gd-1_50.lib;boost_locale-vc100-mt-gd-1_50.lib;boost_math_c99-vc100-mt-gd-1_50.lib;boost_math_c99f-vc100-mt-gd-1_50.lib;boost_math_tr1-vc100-mt-gd-1_50.lib;boost_math_tr1f-vc100-mt-gd-1_50.lib;boost_mpi-vc100-mt-gd-1_50.lib;boost_prg_exec_monitor-vc100-mt-gd-1_50.lib;boost_program_options-vc100-mt-gd-1_50.lib;boost_random-vc100-mt-gd-1_50.lib;boost_regex-vc100-mt-gd-1_50.lib;boost_serialization-vc100-mt-gd-1_50.lib;boost_signals-vc100-mt-gd-1_50.lib;boost_system-vc100-mt-gd-1_50.lib;boost_thread-vc100-mt-gd-1_50.lib;boost_timer-vc100-mt-gd-1_50.lib;boost_unit_test_framework-vc100-mt-gd-1_50.lib;boost_wave-vc100-mt-gd-1_50.lib;boost_wserialization-vc100-mt-gd-1_50.lib;libboost_chrono-vc100-mt-gd-1_50.lib;libboost_date_time-vc100-mt-gd-1_50.lib;libboost_filesystem-vc100-mt-gd-1_50.lib;libboost_graph_parallel-vc100-mt-gd-1_50.lib;libboost_iostreams-vc100-mt-gd-1_50.lib;libboost_locale-vc100-mt-gd-1_50.lib;libboost_math_c99-vc100-mt-gd-1_50.lib;libboost_math_c99f-vc100-mt-gd-1_50.lib;libboost_math_tr1-vc100-mt-gd-1_50.lib;libboost_math_tr1f-vc100-mt-gd-1_50.lib;libboost_mpi-vc100-mt-gd-1_50.lib;libboost_prg_exec_monitor-vc100-mt-gd-1_50.lib;libboost_program_options-vc100-mt-gd-1_50.lib;libboost_random-vc100-mt-gd-1_50.lib;libboost_regex-vc100-mt-gd-1_50.lib;libboost_serialization-vc100-mt-gd-1_50.lib;libboost_signals-vc100-mt-gd-1_50.lib;libboost_system-vc100-mt-gd-1_50.lib;libboost_test_exec_monitor-vc100-mt-gd-1_50.lib;libboost_thread-vc100-mt-gd-1_50.lib;libboost_timer-vc100-mt-gd-1_50.lib;libboost_unit_test_framework-vc100-mt-gd-1_50.lib;libboost_wave-vc100-mt-gd-1_50.lib;libboost_wserialization-vc100-mt-gd-1_50.lib;MapReduceMPI-gd.lib;mpistubs-gd.lib;vtkalglib-gd.lib;vtkCharts-gd.lib;vtkCommon-gd.lib;vtkDICOMParser-gd.lib;vtkexoIIc-gd.lib;vtkexpat-gd.lib;vtkFiltering-gd.lib;vtkfreetype-gd.lib;vtkftgl-gd.lib;vtkGenericFiltering-gd.lib;vtkGeovis-gd.lib;vtkGraphics-gd.lib;vtkhdf5-gd.lib;vtkHybrid-gd.lib;vtkImaging-gd.lib;vtkInfovis-gd.lib;vtkIO-gd.lib;vtkjpeg-gd.lib;vtklibxml2-gd.lib;vtkmetaio-gd.lib;vtkNetCDF-gd.lib;vtkNetCDF_cxx-gd.lib;vtkpng-gd.lib;vtkproj4-gd.lib;vtkRendering-gd.lib;vtksqlite-gd.lib;vtksys-gd.lib;vtktiff-gd.lib;vtkverdict-gd.lib;vtkViews-gd.lib;vtkVolumeRendering-gd.lib;vtkWidgets-gd.lib;vtkzlib-gd.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="pcl_test.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
